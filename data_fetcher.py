@@ -8,6 +8,8 @@ ANIMALS_API_KEY= os.getenv("ANIMALS_API_KEY")
 ANIMALS_API_URL="https://api.api-ninjas.com/v1/animals?"
 
 def get_animals(searched_animal):
+    """uses Ninja api to fetch animal's data documentation of the api
+    can be found in the following link https://api-ninjas.com/api/animals"""
     data = {
         "name": searched_animal
     }
