@@ -41,7 +41,7 @@ def serialize_animals(data):
 
 def load_template(html_path):
     """loads the template to use in generating the webpage"""
-    with open(html_path, "r") as handle:
+    with open(html_path, "r", encoding="utf-8") as handle:
         return handle.read()
 
 def regenerate_html(html_path, data, animal):

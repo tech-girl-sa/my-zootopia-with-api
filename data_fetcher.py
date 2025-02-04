@@ -14,5 +14,9 @@ def get_animals(searched_animal):
         "name": searched_animal
     }
     encoded_data = parse.urlencode(data)
-    response = requests.get(ANIMALS_API_URL+encoded_data,headers={'X-Api-Key': ANIMALS_API_KEY})
+    response = requests.get(
+        ANIMALS_API_URL+encoded_data,
+        headers={'X-Api-Key': ANIMALS_API_KEY},
+        timeout=5
+    )
     return response.json()
